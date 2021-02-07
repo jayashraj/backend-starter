@@ -8,12 +8,12 @@ import {
   UpdateDateColumn,
   Unique,
 } from "typeorm";
-//class calidator contains modules to chack properties of the data entered into the database
+//class validator contains modules to chack properties of the data entered into the database
 import { IsEmail, Length } from "class-validator";
 import { v4 as uuid } from "uuid";
 
-//base entitity is differet from entity, dont need to write prover or sth
 @Entity("users")
+//base entitity is differet from entity
 export default class Users extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
